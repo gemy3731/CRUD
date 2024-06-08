@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD operation</title>
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body class="bg-black text-light">
+    <div class="container w-75 pt-5">
+        <h1>Product management system</h1>
+    <div class="input-group mt-5 px-5 py-3">
+        <div class="form-floating mb-3 text-black w-100">
+            <input type="text" class="form-control" id="productName" placeholder="Product Name">
+            <label for="productName">Product Name</label>
+        </div>
+        <div class="form-floating mb-3 text-black w-100">
+            <input type="number" class="form-control" id="productPrice" placeholder="Product Price">
+            <label for="productPrice">Product Price</label>
+        </div>
+        <div class="form-floating mb-3 text-black w-100">
+            <input list="productCat" type="text" class="form-control" id="productCat" placeholder="Product Category">
+            <label for="productCat">ProductCategory</label>
+            <datalist id="productCat">
+                <option value="HTC">
+                <option value="Iphone">
+                <option value="Samsung">
+                <option value="Oppo">
+                <option value="Sony">
+            </datalist>
+        </div>
+        <div class="form-floating mb-3 text-black w-100">
+            <textarea class="form-control" placeholder="Product Description" id="productDesc"></textarea>
+            <label for="productDesc">Product Description</label>
+        </div>
+        <div class="form-floating mb-3 text-black w-100">
+            <input type="file" class="form-control" id="productImg" placeholder="Product Image">
+            <label for="productImg">Product Image</label>
+        </div>
+        <button id="addButton" onclick="addProduct()" class="btn btn-primary rounded mt-2">Add Product</button>
+        <button id="updateButton" onclick="updateProduct()" class="btn btn-primary rounded mt-2 d-none">Update Product</button>
+    </div>
+    </div>
+
+    <div class="container w-75 p-5">
+        <div class="form-floating text-black w-100">
+            <input oninput="search(this.value)" type="text" class="form-control" id="productSearch" placeholder="Search...">
+            <label for="productSearch">Search...</label>
+        </div>
+    </div>
+
+
+
+
+    <div class="container w-75 p-5">
+        <div id="card" class="row gy-4">
+        </div>
+    </div>
+
+    <script src="JS/main.js"></script>
+</body>
+</html>
